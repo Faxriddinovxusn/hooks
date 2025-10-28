@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymFood Zone</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0f0f;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #ff3b3b;
+      animation: fadeIn 2s ease-in;
+    }
+    section {
+      margin-top: 50px;
+      padding: 20px 40px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #ff8800;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ff3b3b;
+      display: inline-block;
+    }
+    .hooks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .hook {
+      background: #1a1a1a;
+      border-radius: 15px;
+      padding: 25px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      text-align: center;
+      transition: 0.4s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    .hook:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(255, 59, 59, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 50px;
+      font-size: 1.3rem;
+      color: #ccc;
+      animation: fadeUp 2s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>GymFood Zone 🔥</header>
+
+  <section>
+    <h2>Raqamli bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">1. Samarali vazn olishning top 3 usuli</div>
+      <div class="hook">7. Mushak massasini o‘stirishda muhim bo‘lgan top 3 ta mahsulot</div>
+      <div class="hook">15. Vazn olishda siz eshitgan top 10 ta miflar</div>
+      <div class="hook">19. Sog‘lom tana uchun eng oddiy 5 qadam</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Axborot beruvchi bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">2. Ozishda ko‘pchilik yo‘l qo‘yadigon xatolar</div>
+      <div class="hook">8. Vazn olishda siz qilayotgan xatolar</div>
+      <div class="hook">9. Mana shu 5 ta mahsulot sizning suyaklaringizni po‘latdan qiladi</div>
+      <div class="hook">14. Mana shu mahsulotlarni hech qachon iste'mol qilmang</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Qorqituvchi bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">5. Agar tog‘ri ovqatlanmasangiz mana sizni nimalar kutmoqda</div>
+      <div class="hook">16. Mana nega siz doim o‘zingizning vazningizdan shikoyat qilasiz</div>
+      <div class="hook">17. Har kuni bitta xato — orzudagi tana uzoqlashadi</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Solishtiruvchi bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">6. Men 20 kunda 5 kg vazn oldim</div>
+      <div class="hook">11. 2 oyda kacho‘k bo‘ling</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Savol va sirli bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">3. Mana siz nima uchun oza olmayapsiz</div>
+      <div class="hook">4. Uy sharoiti da ham vazn olish mumkinligini bilarmidingiz</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Motivatsion va ilhomlantiruvchi bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">12. Siz ham oz vaqt ichida o‘zingiz orzu qilgan natijaga erisha olasiz</div>
+      <div class="hook">18. Mushak emas, motivatsiya ham ovqatdan boshlanadi</div>
+      <div class="hook">20. Qachonki to‘g‘ri ovqatlansang — o‘sha payt yutasan</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ajablanarli bo‘lim</h2>
+    <div class="hooks">
+      <div class="hook">10. Uyingizdagi mahsulotlar sizni baquvvat qiladi</div>
+      <div class="hook">13. Siz bu yurishizda oza olmaysiz</div>
+    </div>
+  </section>
+
+  <footer>
+    🎥 Reels ssenariy: «Odamlar o‘ylaydi gym — bu faqat mashq. Aslida esa, u oshxonadan boshlanadi. Agar sen tanangni o‘zgartirmoqchi bo‘lsang — dastlab ovqatingni o‘zgartir.»
+  </footer>
+
+  <script>
+    const hooks = document.querySelectorAll('.hook');
+    hooks.forEach((h, i) => {
+      h.style.animation = `fadeUp 1s ease ${i * 0.1}s forwards`;
+      h.style.opacity = 0;
+      setTimeout(() => h.style.opacity = 1, i * 100);
+    });
+  </script>
+</body>
+</html>
