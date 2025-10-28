@@ -11,6 +11,7 @@
       color: white;
       font-family: 'Poppins', sans-serif;
       overflow-x: hidden;
+      padding-bottom: 120px; /* make room for the fixed button */
     }
     header {
       text-align: center;
@@ -59,6 +60,31 @@
       font-size: 1.3rem;
       color: #ccc;
       animation: fadeUp 2s ease;
+    }
+    /* Telegram fixed button */
+    .tele-btn {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 18px;
+      background: linear-gradient(135deg,#0088cc,#00bfff);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+      z-index: 9999;
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      opacity: 0.98;
+    }
+    .tele-btn:hover {
+      transform: translateX(-50%) translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+      opacity: 1;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-30px); }
@@ -136,8 +162,13 @@
   </section>
 
   <footer>
-    🎥 Reels ssenariy: «Idea kemayaptida Zarina. bir amallirman»
+    🎥 Reels ssenariy: «Idea kemayaptida, bir amallrimiz.»
   </footer>
+
+  <!-- Telegram link button (opens in new tab) -->
+  <a class="tele-btn" href="https://t.me/Notebook_uz1" target="_blank" rel="noopener noreferrer">
+    Telegram kanalga o'tish
+  </a>
 
   <script>
     const hooks = document.querySelectorAll('.hook');
