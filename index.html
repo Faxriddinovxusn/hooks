@@ -1,182 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GymFood Zone</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gymfood Zone Hooks</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0f0f0f;
-      color: white;
       font-family: 'Poppins', sans-serif;
-      overflow-x: hidden;
-      padding-bottom: 120px; /* make room for the fixed button */
+      background-color: #0f0f0f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
     }
     header {
       text-align: center;
-      padding: 60px 20px;
-      font-size: 3rem;
+      padding: 40px 0;
+      font-size: 2em;
       font-weight: 700;
-      color: #ff3b3b;
-      animation: fadeIn 2s ease-in;
+      color: #ffcc00;
     }
-    section {
-      margin-top: 50px;
-      padding: 20px 40px;
-    }
-    h2 {
-      font-size: 2rem;
-      color: #ff8800;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ff3b3b;
-      display: inline-block;
-    }
-    .hooks {
+    .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .hook {
-      background: #1a1a1a;
-      border-radius: 15px;
-      padding: 25px;
-      font-size: 1.2rem;
-      line-height: 1.6;
+    .card {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3);
+    }
+    .category {
+      color: #ffcc00;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hook-text {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+    .scenario {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(255, 204, 0, 0.2);
+      transition: 0.3s;
+    }
+    .scenario:hover {
+      transform: scale(1.02);
+    }
+    .scenario h2 {
+      color: #ffcc00;
       text-align: center;
-      transition: 0.4s;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
+      margin-bottom: 20px;
     }
-    .hook:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow: 0 10px 25px rgba(255, 59, 59, 0.2);
-    }
-    footer {
-      text-align: center;
-      padding: 50px;
-      font-size: 1.3rem;
-      color: #ccc;
-      animation: fadeUp 2s ease;
-    }
-    /* Telegram fixed button */
-    .tele-btn {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 18px;
-      background: linear-gradient(135deg,#0088cc,#00bfff);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-      z-index: 9999;
-      transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      opacity: 0.98;
-    }
-    .tele-btn:hover {
-      transform: translateX(-50%) translateY(-3px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-      opacity: 1;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .scenario p {
+      line-height: 1.7;
+      margin-bottom: 12px;
     }
   </style>
 </head>
 <body>
-  <header>GymFood Zone 🔥</header>
-
-  <section>
-    <h2>Raqamli </h2>
-    <div class="hooks">
-      <div class="hook">1. Samarali vazn olishning top 3 usuli</div>
-      <div class="hook">7. Mushak massasini o‘stirishda muhim bo‘lgan top 3 ta mahsulot</div>
-      <div class="hook">15. Vazn olishda siz eshitgan top 10 ta miflar</div>
-      <div class="hook">19. Sog‘lom tana uchun eng oddiy 5 qadam</div>
+  <header>Gymfood Zone Hooks</header>
+  <div class="container">
+    <div class="card">
+      <div class="category">Raqamli</div>
+      <div class="hook-text">Samarali vazn olishning top 3 usuli</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Axborot beruvchi </h2>
-    <div class="hooks">
-      <div class="hook">2. Ozishda ko‘pchilik yo‘l qo‘yadigon xatolar</div>
-      <div class="hook">8. Vazn olishda siz qilayotgan xatolar</div>
-      <div class="hook">9. Mana shu 5 ta mahsulot sizning suyaklaringizni po‘latdan qiladi</div>
-      <div class="hook">14. Mana shu mahsulotlarni hech qachon iste'mol qilmang</div>
+    <div class="card">
+      <div class="category">Axborot beruvchi</div>
+      <div class="hook-text">Ozishda ko'pchilik yo'l qo'yadigon xatolar</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Qorqituvchi </h2>
-    <div class="hooks">
-      <div class="hook">5. Agar tog‘ri ovqatlanmasangiz mana sizni nimalar kutmoqda</div>
-      <div class="hook">16. Mana nega siz doim o‘zingizning vazningizdan shikoyat qilasiz</div>
-      <div class="hook">17. Har kuni bitta xato — orzudagi tana uzoqlashadi</div>
+    <div class="card">
+      <div class="category">Sirli</div>
+      <div class="hook-text">Mana siz nima uchun oza olmayapsiz</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Solishtiruvchi </h2>
-    <div class="hooks">
-      <div class="hook">6. Men 20 kunda 5 kg vazn oldim</div>
-      <div class="hook">11. 2 oyda kacho‘k bo‘ling</div>
+    <div class="card">
+      <div class="category">Savol</div>
+      <div class="hook-text">Uy sharoiti da ham vazn olish mumkinligini bilarmidingiz</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Savol va sirli </h2>
-    <div class="hooks">
-      <div class="hook">3. Mana siz nima uchun oza olmayapsiz</div>
-      <div class="hook">4. Uy sharoiti da ham vazn olish mumkinligini bilarmidingiz</div>
+    <div class="card">
+      <div class="category">Qorqituvchi</div>
+      <div class="hook-text">Agar tog'ri ovqatlanmasangiz mana sizni nimalar kutmoqda</div>
     </div>
-  </section>
-
-  <section>
-    <h2> ilhomlantiruvchi </h2>
-    <div class="hooks">
-      <div class="hook">12. Siz ham oz vaqt ichida o‘zingiz orzu qilgan natijaga erisha olasiz</div>
-      <div class="hook">18. Mushak emas, motivatsiya ham ovqatdan boshlanadi</div>
-      <div class="hook">20. Qachonki to‘g‘ri ovqatlansang — o‘sha payt yutasan</div>
+    <div class="card">
+      <div class="category">Solishtiruvchi</div>
+      <div class="hook-text">Men 20 kunda 5 kg vazn oldim</div>
     </div>
-  </section>
-
-  <section>
-    <h2>Axborot beruvchi</h2>
-    <div class="hooks">
-      <div class="hook">10. Uyingizdagi mahsulotlar sizni baquvvat qiladi</div>
-      <div class="hook">13. Siz bu yurishizda oza olmaysiz</div>
+    <div class="card">
+      <div class="category">Raqamli</div>
+      <div class="hook-text">Mushak massasini o'stirishda muxim bo'lgan top 3 ta maxsulot</div>
     </div>
-  </section>
+    <div class="card">
+      <div class="category">Axborot beruvchi</div>
+      <div class="hook-text">Vazn olishda siz qilayotgan xatolar</div>
+    </div>
+    <div class="card">
+      <div class="category">Axborot beruvchi</div>
+      <div class="hook-text">Mana shu 5 ta mahsulot sizning suyaklaringizni po'lat dan qiladi</div>
+    </div>
+    <div class="card">
+      <div class="category">G'aroyib</div>
+      <div class="hook-text">Uyingizdagi mahsulotlar sizni baquvvat qiladi</div>
+    </div>
+    <div class="card">
+      <div class="category">Dangasalik</div>
+      <div class="hook-text">2 oyda kacho'k boling</div>
+    </div>
+    <div class="card">
+      <div class="category">Ishonch / Faxr</div>
+      <div class="hook-text">Siz ham oz vaqt ichida o'zingiz orzu qilgan natijaga erisha olasiz</div>
+    </div>
+    <div class="card">
+      <div class="category">G'azablantiruvchi</div>
+      <div class="hook-text">Siz bu yurishizda oza olmaysiz</div>
+    </div>
+    <div class="card">
+      <div class="category">Axborot beruvchi</div>
+      <div class="hook-text">Mana shu mahsulotlarni hech qachon istemol qilmang</div>
+    </div>
+    <div class="card">
+      <div class="category">Raqamli</div>
+      <div class="hook-text">Vazn olishda siz eshitgan top 10 ta miflar</div>
+    </div>
+    <div class="card">
+      <div class="category">Dangasalik</div>
+      <div class="hook-text">Ozishni tezlashtirish uchun lifehacklar</div>
+    </div>
+    <div class="card">
+      <div class="category">Qorqituvchi</div>
+      <div class="hook-text">Agar ozish jarayonida buni yesangiz hammasi tamom</div>
+    </div>
+    <div class="card">
+      <div class="category">Dangasalik / Axborot</div>
+      <div class="hook-text">Vazn olishning eng oson yo'li</div>
+    </div>
+    <div class="card">
+      <div class="category">Qorqituvchi</div>
+      <div class="hook-text">Hech qachon bu yo'l bilan ozmang</div>
+    </div>
+    <div class="card">
+      <div class="category">Sirli</div>
+      <div class="hook-text">Siz hech qachon oza olmaysiz toki siz buni qilmaguningizgacha</div>
+    </div>
+  </div>
 
-  <footer>
-    🎥 Reels ssenariy: «Idea kemayaptida, bir amallrimiz.»
-  </footer>
-
-  <!-- Telegram link button (opens in new tab) -->
-  <a class="tele-btn" href="https://t.me/Notebook_uz1" target="_blank" rel="noopener noreferrer">
-    Telegram kanalga o'tish
-  </a>
-
-  <script>
-    const hooks = document.querySelectorAll('.hook');
-    hooks.forEach((h, i) => {
-      h.style.animation = `fadeUp 1s ease ${i * 0.1}s forwards`;
-      h.style.opacity = 0;
-      setTimeout(() => h.style.opacity = 1, i * 100);
-    });
-  </script>
+  <div class="scenario">
+    <h2>Gymfood Zone Ssenariy</h2>
+    <p><strong>Kirish (Hook):</strong> Siz ham mushak massasini oshirmoqchisiz, lekin natija yo'qmi?</p>
+    <p><strong>Ovoz ortidan (Zakadr):</strong> Ko'pchilik mashg'ulot zaliga baquvvat bo'laman deb chiqadi lekin bir necha oy natijasizlikdan so'ng taslim bo'lishadi. Buning sababi — to'g'ri ovqatlanmaslikdir. Gymfood Zone sizga to'g'ri ovqatlanishda va mushak massasini olishda yordam beradi.</p>
+    <p><strong>Kamera qarshisida:</strong> Mana bu idishdagi sog'lom ovqat 100% balanslangan: oqsil, kaloriya, uglevod va yog' miqdori hisoblangan. Men o'zim 25 kunda natijaga erishdim. Sport faqat zalda emas, oshxonada ham davom etadi.</p>
+    <p><strong>CTA:</strong> Siz ham natija ko‘rmoqchimisiz? Izohlarda “food” deb yozing — biz siz bilan shaxsiydan bog'lanamiz.</p>
+  </div>
 </body>
 </html>
